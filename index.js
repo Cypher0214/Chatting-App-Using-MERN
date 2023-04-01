@@ -2,7 +2,7 @@
 
 
 const express = require("express");
-const { chats } = require("./Dummmy.js");
+const {chats} = require("./backend/Dummmy")
 
 const dotenv = require("dotenv");
 const app = express();
@@ -27,4 +27,4 @@ app.get('/api/chat/:id', (req, res) =>
 })
 //Our Server will be live to port 3000.
 const PORT = process.env.PORT||6900;
-app.listen(PORT, console.log('server is started on PORT ${PORT}'))
+app.listen(PORT, console.log(`server is started on PORT ${PORT}`))
