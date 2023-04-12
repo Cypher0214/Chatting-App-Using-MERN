@@ -15,7 +15,7 @@ app.get("/", (req, res) => {
 
 app.get("/api/chat", (req, res) => {
   res.send(chats);
-});
+}); 
 
 app.get("/api/chat/:id", (req, res) => {
   const singleUser = chats.find((c) => c._id === req.params.id);
@@ -23,5 +23,6 @@ app.get("/api/chat/:id", (req, res) => {
 });
 
 const PORT = process.env.PORT || 6900;
+
 
 app.listen(PORT, console.log(`Server is started on PORT ${PORT}`));
