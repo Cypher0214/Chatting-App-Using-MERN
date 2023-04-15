@@ -59,6 +59,20 @@ export const Login = () => {
       >
         Login
       </Button>
+      <Button
+        variant={"solid"}
+        colorScheme="red"
+        width={"100%"}
+        onClick={
+          () => {
+            setEmail("ghfag.com")
+             setPassword("2424")
+           }
+         }
+      
+      >
+         Get Guest user Crediantals
+      </Button>
     </VStack>
   );
 };
