@@ -2,6 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Box, Container, Text } from "@chakra-ui/react"
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
+import { Login } from "../src/Components/Authentication/Login"
+import { Signup } from "../src/Components/Authentication/Signup";
+
 const HomePage = props => {
   return (
     <Container maxW={"xl"} centerContent>
@@ -26,20 +29,16 @@ const HomePage = props => {
         p={4}
         borderRadius={"lg"}
         borderWidth={"1px"}
-        color={'black'}
+        color={"black"}
       >
-        <Tabs variant="soft-rounded" >
-          <TabList>
-            <Tab>Login</Tab>
-            <Tab>Sign Up</Tab>
+        <Tabs variant="soft-rounded">
+          <TabList mb={"1lem"}>
+            <Tab width={"50%"}>Login</Tab>
+            <Tab width={"50%"}>Sign Up</Tab>
           </TabList>
           <TabPanels>
-            <TabPanel>
-              <p>one!</p>
-            </TabPanel>
-            <TabPanel>
-              <p>two!</p>
-            </TabPanel>
+            <TabPanel><Login/></TabPanel>
+            <TabPanel><Signup/></TabPanel>
           </TabPanels>
         </Tabs>
       </Box>
